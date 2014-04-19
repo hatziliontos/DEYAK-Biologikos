@@ -2,10 +2,6 @@
 <meta charset="ISO-8859-7">
 <head>
 <title>HTML Frames Example - Top Nav</title>
-<script type='text/javascript' src='http://code.jquery.com/jquery-1.4.2.js'></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>
-<script type='text/javascript' src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"></script>
-
 <style type="text/css">
 body {
    font-family:verdana,arial,sans-serif;
@@ -23,17 +19,5 @@ body {
    <a href="about.html" target="content">Σχετικά</a> | 
    <a href="help.html" target="content">Βοήθεια</a> | 
 </p>
-<script type="text/javascript">
-window.onload=body_load;
-function body_load() {
-  document.title="Συνεχής Ενεργειακή Επιτήρηση Καλλικράτειας";
-  var github="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/";//DEYAK-Biologikos
-  $("a[href='a']").attr("href", github+"epitirisi.html")
-  $("a[href='b']").attr("href", github+"local_history.html")
-  $("a[href='c']").attr("href", github+"service.html")
-  $("a[href='d']").attr("href", github+"about.html")
-  $("a[href='e']").attr("href", github+"help.html")
-}
-</script>
 </body>
 </html>
