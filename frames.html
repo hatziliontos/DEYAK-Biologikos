@@ -3,12 +3,25 @@
 <meta charset="ISO-8859-7">
 <head>
 <title>Frameset Example Title (Replace this section with your own title)</title>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.4.2.js'></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>
+<script type='text/javascript' src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"></script>
 <script>
-document.title="Συνεχής Ενεργειακή Επιτήρηση ΕΕΛ Καλλικράτειας"
-document.getElementById("topNav").src ="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/top_nav.html"
-document.getElementById("menu").src   ="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/epitirisi.html"
-document.getElementById("content").src="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/content.html"
-document.getElementById("footer").src ="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/footer.html"
+<script type="text/javascript">
+window.onload=body_load;
+function body_load() {
+  document.title="Συνεχής Ενεργειακή Επιτήρηση ΕΕΛ Καλλικράτειας";
+  var github="http://htmlpreview.github.io/?https://github.com/hatziliontos/DEYAK-Biologikos/blob/master/";
+//  $("a[href='1']").attr("href", github+"epitirisi.html")
+//  $("a[href='2']").attr("href", github+"local_history.html")
+//  $("a[href='3']").attr("href", github+"service.html")
+//  $("a[href='4']").attr("href", github+"about.html")
+//  $("a[href='5']").attr("href", github+"help.html")
+document.getElementById("topNav").src =github+"top_nav.html";
+document.getElementById("menu").src   =github+"epitirisi.html";
+document.getElementById("content").src=github+"content.html";
+document.getElementById("footer").src =github+"footer.html";
+}
 </script>
 </head>
 <frameset rows="100,*,80" frameborder="0" border="0" framespacing="0">
