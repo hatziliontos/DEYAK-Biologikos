@@ -19,14 +19,17 @@ body {
    <a id="4" href="" target="menu">Σχετικά</a> | 
    <a id="5" href="" target="menu">Βοήθεια</a>
 </p>
-<script>
-document.title="Συνεχής Ενεργειακή Επιτήρηση ΕΕΛ Καλλικράτειας";
-var github="http://htmlpreview.github.io/?https://raw.github.com/hatziliontos/DEYAK-Biologikos";
-document.getElementsById("1").href =github+"/master/epitirisi.html";
-document.getElementsById("2").href =github+"/master/local_history.html";
-document.getElementsById("3").href =github+"/master/service.html";
-document.getElementsById("4").href ="";
-document.getElementsById("5").href ="";
+<script type="text/javascript">
+window.onload=body_load;
+function body_load() {
+  document.title="Συνεχής Ενεργειακή Επιτήρηση ΕΕΛ Καλλικράτειας";
+  var github="http://htmlpreview.github.io/?https://raw.github.com/hatziliontos/DEYAK-Biologikos";
+  document.getElementsById("1").href =github+"/master/epitirisi.html";
+  document.getElementsById("2").href =github+"/master/local_history.html";
+  document.getElementsById("3").href =github+"/master/service.html";
+  document.getElementsById("4").href ="";
+  document.getElementsById("5").href ="";
+}
 </script>
 </body>
 </html>
