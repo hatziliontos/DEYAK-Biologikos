@@ -3,6 +3,9 @@
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script language='JavaScript' type='text/JavaScript'>
+function load() { 
+  queryService("mycallbackfunc");
+}
 function queryService(callbackFunc){
 	var timeout_json = 30; //seconds
 	$.ajax({
@@ -25,7 +28,8 @@ function queryService(callbackFunc){
 		})
 	});
 }
-function load() { 
+function mycallbackfunc(data){
+  alert(data);
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
