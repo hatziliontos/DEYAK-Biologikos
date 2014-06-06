@@ -1,19 +1,24 @@
 <html>
 <meta http-equiv="content-type" content="text/xml;charset=utf-8" />
 <head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script language='JavaScript' type='text/JavaScript'>
 function load() { 
   url_='http://deyak-biologikos2.no-ip.org:1230';
-  document.getElementById("status_xml").href=url_+'/status.xml';
-  var x = new XMLHttpRequest();
-  x.open("GET", url_+'/status.xml', true);
-  x.onreadystatechange = function () {
-    if (x.readyState == 4 && x.status == 200) {
-      var doc = x.responseXML;
-      alert(x);
+  jQuery.get(url_+'/status.xml',        function (data) {
+      document.getElementById("lanip").innerHTML="LANIP:"+data;
     }
-  };
-  x.send(null);
+    ,'text/xml');
+  //document.getElementById("status_xml").href=url_+'/status.xml';
+  //var x = new XMLHttpRequest();
+  //x.open("GET", url_+'/status.xml', true);
+  //x.onreadystatechange = function () {
+  //  if (x.readyState == 4 && x.status == 200) {
+  //    var doc = x.responseXML;
+  //    alert(x);
+  //  }
+  //};
+  //x.send(null);
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
