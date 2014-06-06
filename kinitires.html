@@ -3,23 +3,29 @@
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script language='JavaScript' type='text/JavaScript'>
+function queryService(callbackFunc){
+	var timeout_json = 30; //seconds
+	$.ajax({
+		type: "GET",
+		url: "http://deyak-biologikos2.no-ip.org:1230/status.xml",
+		crossDomain: true,
+		cache: false,
+		dataType: "jsonp",
+		jsonp : "callback", //Server only supports JSONP param name "callback"
+		jsonpCallback: callbackFunc,
+		timeout: timeout_json,
+		error: (function(xhr, ajaxOptions, thrownError){
+			//hide page loading or wait message
+			//show error message ie. "Status Code: ("+xhr.status+")<br>Description: "+xhr.statusText
+		}),
+		success: (function(data){
+			//hide page loading or wait message
+			//data may be an object or a simple string depends on the json format returned by the service
+      //you can use your response data here and also on you callback function.
+		})
+	});
+}
 function load() { 
-  url_='http://deyak-biologikos2.no-ip.org:1230';
-  document.getElementById("status_xml").href=url_+'/status.xml';
-  jQuery.get(url_+'/status.xml',        function (x) {
-      //document.getElementById("lanip").innerHTML="LANIP:"+data;
-      alert(x);
-    }
-    ,'text/xml');
-  //var x = new XMLHttpRequest();
-  //x.open("GET", url_+'/status.xml', true);
-  //x.onreadystatechange = function () {
-  //  if (x.readyState == 4 && x.status == 200) {
-  //    var doc = x.responseXML;
-  //    alert(x);
-  //  }
-  //};
-  //x.send(null);
 }
 </script>
 <title>Συνεχής Ενεργειακή Επιτήρηση</title>
