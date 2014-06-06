@@ -5,9 +5,9 @@
 <script language='JavaScript' type='text/JavaScript'>
 function load() { 
   url_='http://deyak-biologikos2.no-ip.org:1230';
+  document.getElementById("status_xml").href=url_+'/status.xml';
   jQuery.get(url_+'/status.xml',        function (x) {
       //document.getElementById("lanip").innerHTML="LANIP:"+data;
-      document.getElementById("status_xml").href=url_+'/status.xml';
       alert(x);
     }
     ,'text/xml');
