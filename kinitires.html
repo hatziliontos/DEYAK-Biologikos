@@ -7,25 +7,18 @@ function load() {
   queryService("mycallbackfunc");
 }
 function queryService(callbackFunc){
-	var timeout_json = 5; //seconds
+	var timeout_json = 5;
 	$.ajax({
 		type: "GET",
 		url: "http://deyak-biologikos2.no-ip.org:1230/status.xml",
 		crossDomain: true,
 		cache: false,
 		dataType: "jsonp",
-		jsonp : "callback", //Server only supports JSONP param name "callback"
+		jsonp : "callback",
 		jsonpCallback: callbackFunc,
 		timeout: timeout_json,
-		error: (function(xhr, ajaxOptions, thrownError){
-			//hide page loading or wait message
-			//show error message ie. "Status Code: ("+xhr.status+")<br>Description: "+xhr.statusText
-		}),
-		success: (function(data){
-			//hide page loading or wait message
-			//data may be an object or a simple string depends on the json format returned by the service
-      //you can use your response data here and also on you callback function.
-		})
+		error: (function(xhr, ajaxOptions, thrownError){}),
+		success: (function(data){})
 	});
 }
 function mycallbackfunc(data){
