@@ -7,10 +7,10 @@ function load() {
   url_='http://deyak-biologikos2.no-ip.org:1230';
   jQuery.get(url_+'/status.xml',        function (x) {
       //document.getElementById("lanip").innerHTML="LANIP:"+data;
+      document.getElementById("status_xml").href=url_+'/status.xml';
       alert(x);
     }
     ,'text/xml');
-  //document.getElementById("status_xml").href=url_+'/status.xml';
   //var x = new XMLHttpRequest();
   //x.open("GET", url_+'/status.xml', true);
   //x.onreadystatechange = function () {
