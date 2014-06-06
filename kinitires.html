@@ -7,7 +7,7 @@ function load() {
   queryService("mycallbackfunc");
 }
 function queryService(callbackFunc){
-	var timeout_json = 30; //seconds
+	var timeout_json = 5; //seconds
 	$.ajax({
 		type: "GET",
 		url: "http://deyak-biologikos2.no-ip.org:1230/status.xml",
